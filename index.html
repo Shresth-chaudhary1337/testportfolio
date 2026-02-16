@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shresth Chaudhary | Software Engineer</title>
+
+<style>
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --sub: #4b5563;
+    --accent: #6366f1;
+}
+
+.dark {
+    --bg: #0b1120;
+    --card: #020617;
+    --text: #e5e7eb;
+    --sub: #9ca3af;
+    --accent: #38bdf8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 6px 0;
+    color: var(--sub);
+}
+
+.toggle {
+    cursor: pointer;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.card {
+    background: var(--card);
+    padding: 26px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    animation: fade 0.6s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    margin-top: 0;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+}
+
+.badges span {
+    display: inline-block;
+    margin: 6px 6px 0 0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(99,102,241,0.12);
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.timeline {
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+}
+
+.timeline div {
+    margin-bottom: 14px;
+}
+
+.timeline strong {
+    display: block;
+}
+
+.progress {
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress span {
+    display: block;
+    height: 8px;
+    background: var(--accent);
+}
+
+footer {
+    text-align: center;
+    margin: 50px 0 20px;
+    color: var(--sub);
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <div>
+        <h1>Shresth Chaudhary</h1>
+        <p>Software Engineer · Competitive Programmer</p>
+        <p>📍 India · ✉️ shresth.dev@email.com · 💻 github.com/shresthdev</p>
+    </div>
+    <button class="toggle" onclick="toggleTheme()">🌙 Toggle Theme</button>
+</header>
+
+<div class="grid">
+
+<div class="card">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate software engineering student with a strong focus on problem solving,
+        data structures, and algorithmic thinking. I enjoy writing optimized C++ code and breaking
+        down complex problems into simple logical steps.
+    </p>
+    <p>
+        Actively preparing for technical interviews and building a strong foundation in core
+        computer science concepts.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Technical Skills</h2>
+    <div class="badges">
+        <span>C++</span>
+        <span>C</span>
+        <span>Python</span>
+        <span>Data Structures</span>
+        <span>Algorithms</span>
+        <span>OOP</span>
+        <span>STL</span>
+        <span>Git & GitHub</span>
+        <span>Linux Basics</span>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Projects</h2>
+    <p><strong>Matrix & Array Toolkit (C++)</strong></p>
+    <p>
+        Developed a collection of programs handling matrix rotation, transpose,
+        spiral traversal, and zero-matrix transformation using in-place algorithms.
+    </p>
+
+    <p><strong>String Processing Suite</strong></p>
+    <p>
+        Implemented palindrome detection, substring matching, and frequency analysis
+        using efficient pointer-based techniques.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Problem Solving</h2>
+    <p>
+        Solved <strong>300+ problems</strong> on LeetCode and other platforms covering:
+    </p>
+    <ul>
+        <li>Arrays & Strings</li>
+        <li>Recursion & Backtracking</li>
+        <li>Bit Manipulation</li>
+        <li>Time & Space Optimization</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2>Learning Timeline</h2>
+    <div class="timeline">
+        <div>
+            <strong>2023</strong>
+            <span>Started C++ and programming fundamentals</span>
+        </div>
+        <div>
+            <strong>2024</strong>
+            <span>Focused on DSA and competitive programming</span>
+        </div>
+        <div>
+            <strong>2025</strong>
+            <span>Interview prep & system-level understanding</span>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Skill Levels</h2>
+    <p>C++</p>
+    <div class="progress"><span style="width:85%"></span></div>
+    <p>Data Structures</p>
+    <div class="progress"><span style="width:80%"></span></div>
+    <p>Algorithms</p>
+    <div class="progress"><span style="width:75%"></span></div>
+</div>
+
+</div>
+
+<footer>
+    © 2026 Shresth Chaudhary · Built with HTML, CSS & JavaScript
+</footer>
+
+</div>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
