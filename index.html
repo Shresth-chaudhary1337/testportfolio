@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shresth Chaudhary | AI-Enhanced Tech Resume</title>
+
+<style>
+:root {
+    --bg: radial-gradient(circle at top, #0f172a, #020617);
+    --card: rgba(255,255,255,0.05);
+    --text: #e5e7eb;
+    --sub: #94a3b8;
+    --accent: #38bdf8;
+    --glow: 0 0 20px rgba(56,189,248,0.6);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+    animation: glowText 3s infinite alternate;
+}
+
+header p {
+    font-size: 20px;
+    color: var(--sub);
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 10px #38bdf8; }
+    to { text-shadow: 0 0 30px #38bdf8; }
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: var(--glow);
+    backdrop-filter: blur(12px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.card:nth-child(even) {
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+h2 {
+    font-size: 36px;
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skill {
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 18px;
+    background: rgba(56,189,248,0.15);
+    box-shadow: 0 0 15px rgba(56,189,248,0.4);
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(#38bdf8, transparent);
+}
+
+.timeline div {
+    margin-bottom: 24px;
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.progress {
+    height: 14px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0 20px;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    animation: load 2s ease forwards;
+}
+
+@keyframes load {
+    from { width: 0; }
+}
+
+footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 16px;
+    color: var(--sub);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <h1>Shresth Chaudhary</h1>
+    <p>Software Engineer · DSA Specialist · Future SDE</p>
+</header>
+
+<section class="hero">
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I am a problem-driven software engineer who enjoys building efficient solutions
+            using C++ and core computer science principles. My focus is on mastering algorithms,
+            writing optimized code, and preparing for high-impact tech roles.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Tech Stack</h2>
+        <div class="skills">
+            <div class="skill">C++</div>
+            <div class="skill">Data Structures</div>
+            <div class="skill">Algorithms</div>
+            <div class="skill">OOP</div>
+            <div class="skill">Git</div>
+            <div class="skill">Linux</div>
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="card">
+        <h2>Projects</h2>
+        <p><strong>Matrix & Array Engine</strong><br>
+        Advanced matrix transformations including rotation, spiral traversal,
+        and zero-matrix propagation using in-place logic.</p>
+
+        <p><strong>String Intelligence Suite</strong><br>
+        High-performance string processing using two-pointer, hashing,
+        and recursion-based approaches.</p>
+    </div>
+
+    <div class="card">
+        <h2>Skill Levels</h2>
+        <p>C++</p>
+        <div class="progress"><span style="width:90%"></span></div>
+        <p>DSA</p>
+        <div class="progress"><span style="width:85%"></span></div>
+        <p>Algorithms</p>
+        <div class="progress"><span style="width:80%"></span></div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="card">
+        <h2>Journey</h2>
+        <div class="timeline">
+            <div><strong>2023</strong> – Programming foundations & C++</div>
+            <div><strong>2024</strong> – DSA & competitive problem solving</div>
+            <div><strong>2025</strong> – Interview prep & system thinking</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Impact</h2>
+        <p>
+            ✔ Solved 300+ algorithmic problems<br>
+            ✔ Strong debugging & optimization mindset<br>
+            ✔ Clean, readable, interview-ready code
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Shresth Chaudhary · Animated Resume · HTML + CSS
+</footer>
+
+</div>
+</body>
+</html>
