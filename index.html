@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shresth Chaudhary | Software Developer</title>
+
+<style>
+:root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #222;
+    --sub: #555;
+    --accent: #2563eb;
+}
+
+.dark {
+    --bg: #0f172a;
+    --card: #020617;
+    --text: #e5e7eb;
+    --sub: #94a3b8;
+    --accent: #38bdf8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle {
+    cursor: pointer;
+    border: none;
+    background: var(--accent);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    margin-top: 0;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: rgba(37,99,235,0.1);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.project.hidden { display: none; }
+
+.footer {
+    text-align: center;
+    margin: 40px 0 10px;
+    color: var(--sub);
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <div>
+        <h1>Shresth Chaudhary</h1>
+        <p>Software Developer | C++ | DSA</p>
+        <p>📍 India · 💻 GitHub · 🔗 LinkedIn</p>
+    </div>
+    <button class="toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+</header>
+
+<div class="card">
+    <h2>Professional Summary</h2>
+    <p>
+        Passionate programmer with strong foundations in C++, Data Structures, and Algorithms.
+        Experienced in solving problems using optimized logic and clean coding practices.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+        <div class="skill">C++</div>
+        <div class="skill">C</div>
+        <div class="skill">Python (Basic)</div>
+        <div class="skill">DSA</div>
+        <div class="skill">OOP</div>
+        <div class="skill">Git & GitHub</div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>Projects</h2>
+    <p><strong>Matrix Operations Toolkit</strong> – Implemented rotation, transpose, and spiral traversal in C++.</p>
+    <p><strong>String Utility Programs</strong> – Built palindrome and substring search logic using two-pointer techniques.</p>
+</div>
+
+<div class="footer">
+    © 2026 Shresth Chaudhary · Pure HTML, CSS & JS
+</div>
+
+</div>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
